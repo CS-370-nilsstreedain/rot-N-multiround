@@ -51,11 +51,11 @@ for i in range(10):
                 # if the character is in the range of a-z
                 if c >= 'a'[0] and c <= 'z'[0]:
                     # TODO: fix this to transform the string by offset 'i'
-                    plaintext += 'a'
+                    plaintext += chr((ord(c) - ord('a') + 26 - i) % 26 + ord('a'))
                 # if the character is in the range of A-Z
                 elif c >= 'A'[0] and c <= 'Z'[0]:
                     # TODO: fix this to transform the string by offset 'i'
-                    plaintext += 'a'
+                    plaintext += chr((ord(c) - ord('A') + 26 - i) % 26 + ord('A'))
                 # if the character is not in A-Z nor a-z
                 else:
                     plaintext += c
